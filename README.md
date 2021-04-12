@@ -46,3 +46,14 @@ git push -u origin main
 删除分支: git branch -d <name>
 ```
 
+
+
+# 更新代码测试
+
+```
+git add ./文件名
+git status 
+git commit -m "更改的信息"
+git push 
+```
+
