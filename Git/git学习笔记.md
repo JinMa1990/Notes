@@ -109,4 +109,20 @@ git push
 -a 选项意为"创建一个带注解的标签"。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会让你添加个标签的注解。 我推荐一直创建带注解的标签。
 
 ```
+查看标签：
+git tag -l
+
+创建标签：
 git tag -a v1.0
+
+推送标签：
+git push origin 标签名
+git push origin refs/tags/源标签名:refs/tags/目的标签名
+
+删除本地标签：
+git tag -d 标签名
+
+删除远程标签：
+git push origin :refs/tags/标签名
+git push origin :refs/tags/protobuf-2.5.0rc1
+```
