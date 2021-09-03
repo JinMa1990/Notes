@@ -58,7 +58,7 @@ git commit -m "更改的信息"
 git push 
 
 # 删除
-git add .文件名
+git rm .文件名
 git status 
 git commit -m "更改的信息"
 git push 
