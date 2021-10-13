@@ -39,6 +39,7 @@ git init	#初始化仓库
 git add README.md	#添加文件
 git commit -m "first commit" # 添加提交注释
 git branch -M main
+git remote -v #查看远程仓库地址
 git remote add origin https://github.com/JinMa1990/Notes.git
 git push -u origin main
 ```

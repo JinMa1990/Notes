@@ -123,3 +123,14 @@ sudo apt-get install nfs-common #安装NFS客户端
     之后我们在Atlas500上，就可以挂载目录了：
     Euler:/ # mount -t nfs -o nolock 192.168.3.42:/home/majin/Atlas500/ /ubuntu
 ```
+
+
+
+
+
+## 修改密码
+
+```
+mv /etc/security/opasswd /etc/security/opasswd.bak
+```
+
