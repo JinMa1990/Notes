@@ -1,4 +1,5 @@
 **源码下载地址：[https://github.com/FFmpeg/FFmpeg/releases](https://github.com/FFmpeg/FFmpeg/releases)**
+
 # 在ubuntu16.04上的编译x86库
  1. 编译ffmpeg
 
@@ -23,6 +24,21 @@
 （6）       没有提示“fail”，则安装成功。
 
 # 在ubuntu16.04上的编译ARM库
+
+
+## 编译libx264
+
+
+
+```shell
+./configure --prefix=/opt/aarch/x264/ --enable-shared --prefix=/opt/aarch/x264 --host=arm-linux-gnueabihf- --disable-asm 
+	
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- all -j8
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- install
+```
+
+
+
 1.       准备交叉编译环境
 
 （1）       请准备一台x86_64服务器，将我们提供的Atlas500_package.zip多次解压，获取Euler_compile_env_cross文件夹。
@@ -52,19 +68,12 @@
 （3）       进入FFmpeg-n4.1.3目录，执行configure：
 
         ./configure \
-    
         --prefix=<where you place> \
-    
         --target-os=linux \
-    
         --arch=aarch64 \
-    
         --enable-cross-compile \
-    
         --cross-prefix=<your aarch64-linux-gnu path>/aarch64-linux-gnu- \
-    
         --enable-shared \
-    
         --disable-doc
 
  注：
